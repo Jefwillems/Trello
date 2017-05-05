@@ -1,0 +1,14 @@
+{
+  "name": "kanban-drag-and-drop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "4.0.0-alpha.6",
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.4",
+    "node-sass": "^4.5.2"
+  }
+}
