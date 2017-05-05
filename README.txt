@@ -1,1 +1,1 @@
-[github pages](https://jefwillems.github.io/Trello/)
+https://jefwillems.github.io/Trello/
