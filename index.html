@@ -7,18 +7,38 @@
 	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="node_modules/jqueryui/jquery-ui.min.css">
 	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-
-	<div class="popup-container card">
-		<div class="card-header">
+	<div hidden>
+		<div id="dialog" title="Dialog Title">
+			<!--Begin Partial()-->
+			<div class="card">
+				<div class="card-header">
+					<div>
+						<div>
+							Super goed idee
+						</div>
+						<div>
+							<button class="btn btn-danger" id="popup-close"><i class="material-icons">close</i></button>
+						</div>
+					</div>
+				</div>
+				<div class="card-block">
+					<h5 class="card-title" id="id-header"></h5>
+					<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+				</div>
+			</div>
+			<!--End Partial()-->
 		</div>
-		<h4 class="card-title">goed bezig!</h4>
-
 	</div>
+	<!--
+		TODO: jquery-ui lightweight downloaden, 
+	-->
 	<div class="drag-container">
 		<ul class="drag-list">
 			<li class="drag-column drag-column-on-hold">
@@ -26,12 +46,19 @@
 				<h2>On Hold</h2>
 				<svg class="drag-header-more" data-target="options1" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
 			</span>
-
 				<div class="drag-options" id="options1"></div>
 
 				<ul class="drag-inner-list" id="1">
-					<li class="drag-item"></li>
-					<li class="drag-item"></li>
+					<li class="drag-item">
+						<div class="drag-item-inner" id="popup1">
+
+						</div>
+					</li>
+					<li class="drag-item">
+						<div class="drag-item-inner" id="popup2">
+
+						</div>
+					</li>
 				</ul>
 			</li>
 			<li class="drag-column drag-column-in-progress">
@@ -41,9 +68,21 @@
 			</span>
 				<div class="drag-options" id="options2"></div>
 				<ul class="drag-inner-list" id="2">
-					<li class="drag-item"></li>
-					<li class="drag-item"></li>
-					<li class="drag-item"></li>
+					<li class="drag-item">
+						<div class="drag-item-inner" id="popup3">
+
+						</div>
+					</li>
+					<li class="drag-item">
+						<div class="drag-item-inner" id="popup4">
+
+						</div>
+					</li>
+					<li class="drag-item">
+						<div class="drag-item-inner" id="popup5">
+
+						</div>
+					</li>
 				</ul>
 			</li>
 			<li class="drag-column drag-column-needs-review">
@@ -53,10 +92,26 @@
 			</span>
 				<div class="drag-options" id="options3"></div>
 				<ul class="drag-inner-list" id="3">
-					<li class="drag-item"></li>
-					<li class="drag-item"></li>
-					<li class="drag-item"></li>
-					<li class="drag-item"></li>
+					<li class="drag-item">
+						<div class="drag-item-inner" id="popup6">
+
+						</div>
+					</li>
+					<li class="drag-item">
+						<div class="drag-item-inner" id="popup7">
+
+						</div>
+					</li>
+					<li class="drag-item">
+						<div class="drag-item-inner" id="popup8">
+
+						</div>
+					</li>
+					<li class="drag-item">
+						<div class="drag-item-inner" id="popup9">
+
+						</div>
+					</li>
 				</ul>
 			</li>
 			<li class="drag-column drag-column-approved">
@@ -66,12 +121,24 @@
 			</span>
 				<div class="drag-options" id="options4"></div>
 				<ul class="drag-inner-list" id="4">
-					<li class="drag-item"></li>
-					<li class="drag-item"></li>
+					<li class="drag-item">
+						<div class="drag-item-inner" id="popup10">
+
+						</div>
+					</li>
+					<li class="drag-item">
+						<div class="drag-item-inner" id="popup11">
+
+						</div>
+					</li>
 				</ul>
 			</li>
 		</ul>
 	</div>
+	<script src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.0-rc.2/jquery-ui.min.js" integrity="sha256-55Jz3pBCF8z9jBO1qQ7cIf0L+neuPTD1u7Ytzrp2dqo="
+	 crossorigin="anonymous"></script>
+	<script src="node_modules/tether/dist/js/tether.min.js"></script>
 	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 	<script src='js/dragula.js'></script>
 	<script src="js/index.js"></script>

@@ -82,5 +82,40 @@ var showOptions = (function () {
 	}
 }());
 
+var openPopup = (function () {
+
+
+	function show() {
+		//TODO set content to partial view from DraaiboekEntry
+		$('#id-header').text(this.getAttribute('id'));
+		$("#dialog").dialog({
+			height: 450,
+			width: 600,
+			modal: false,
+			resizable: true,
+			classes: {
+				"ui-dialog": "popup-dialog"
+			}
+		});
+		$("button#popup-close").click(function () {
+			$("#dialog").dialog("close");
+		});
+	}
+	function hide() {
+		$('.popup-window').fadeOut(100);
+	}
+
+	function init() {
+		$('.drag-container').on('click', '.drag-item-inner', show);
+
+	}
+
+	return {
+		init: init
+	}
+}());
+
 createOptions.create();
 showOptions.init();
+
+openPopup.init();
