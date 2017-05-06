@@ -8,7 +8,7 @@ $approved: #00B961;
 }
 
 body {
-    background: #33363D;
+    background: #f4f4f4;
     font-family: 'Lato';
     font-weight: 300;
     line-height: 1.5;
@@ -94,7 +94,7 @@ ul {
 .drag-item {
     margin: 10px;
     height: 100px;
-    background: rgba(black, 0.4);
+    background: rgba(black, 0.5);
     transition: $ease-out;
     &.is-moving {
         transform: scale(1.5);
@@ -168,13 +168,6 @@ ul {
 
 /*custom*/
 
-.card-header div {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-}
-
 .popup-dialog {
     .ui-dialog-titlebar {
         display: none;
@@ -182,5 +175,24 @@ ul {
     .ui-dialog-content {
         margin: 0;
         padding: 0;
+        .card {
+            .card-header {
+                div {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+                    div {
+                        button {
+                            padding: 5px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
